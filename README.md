@@ -2,6 +2,8 @@
 
 **An interactive 3D technical drawing of Apollo 11:** Saturn V AS-506, Command and Service Module *Columbia* (CSM-107) and Lunar Module *Eagle* (LM-5). Everything is drawn part by part on Pad 39A, and every engine can be fired with thrust worked out from its rated data. The whole flight, from the pad to the Pacific, is also laid out on an Earth–Moon map drawn to scale.
 
+**▶ Live: [msreeganeshnaik.github.io/Apollo-11-Anatomy.](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./)**
+
 It is one self-contained web page: open `apollo.html` in a browser and it runs.
 
 ![Saturn V AS-506 on Launch Complex 39A](docs/screenshots/01-stack.png)
@@ -83,7 +85,7 @@ It is one self-contained web page: open `apollo.html` in a browser and it runs.
 
 ## Run it
 
-**Just view it:** open `apollo.html` in a current Chrome, Edge, Safari or Firefox. It needs an internet connection the first time, to load three.js and the two fonts from their CDNs. It needs WebGL 2; if WebGL is off, the spec sheets still load.
+**Just view it:** go to the [live site](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./), or open `apollo.html` in a current Chrome, Edge, Safari or Firefox. It needs an internet connection the first time, to load three.js and the two fonts from their CDNs. It needs WebGL 2; if WebGL is off, the spec sheets still load.
 
 **Serve it locally** (some browsers restrict module scripts on `file://`):
 
@@ -109,6 +111,8 @@ node shot.mjs demo '[["wait",8000],["eval","APOLLO.selectItem(\"dALL\"); APOLLO.
 
 Flags: `--w=1400 --h=1000` set the viewport, `--mobile` uses a 390 × 844 phone, `--dark` forces the dark scheme, `--noaa` turns anti-aliasing off (much faster in software rendering), and `--dpr=2` sets the pixel ratio.
 The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `shutdown()`, `fireOne(i)`, `setExplode(on)`, `warp(seconds)`, `groupState()`, plus `MENU_ITEMS`, `SHOW`, `C`, `CAM`, `J`.
+
+**Hosting.** GitHub Pages serves the `gh-pages` branch, which mirrors `main`. `index.html` forwards to `apollo.html`, and `.nojekyll` makes Pages serve the files as they are. After changing `main`, update the site with `git push origin main:gh-pages`.
 
 **Regenerate the coastlines** (only if you want a different Natural Earth resolution): `npm run land`.
 
