@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/apollo-11-emblem.png" width="190" alt="Apollo 11 mission emblem: an eagle landing on the Moon with an olive branch, Earth behind" /></a>
+<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/images/apollo-11-emblem.png" width="190" alt="Apollo 11 mission emblem: an eagle landing on the Moon with an olive branch, Earth behind" /></a>
 
 # Apollo 11 Anatomy
 
@@ -13,7 +13,7 @@ Fire every engine, take any stage apart, look inside the cabins, and fly the who
 
 [![three.js r160](https://img.shields.io/badge/three.js-r160-0072B5?style=flat-square&logo=threedotjs&logoColor=white&labelColor=0B0B0B)](https://threejs.org/)
 [![WebGL 2](https://img.shields.io/badge/WebGL-2-0072B5?style=flat-square&logo=webgl&logoColor=white&labelColor=0B0B0B)](https://www.khronos.org/webgl/)
-[![One HTML file](https://img.shields.io/badge/one%20file-apollo.html-0072B5?style=flat-square&labelColor=0B0B0B)](apollo.html)
+[![One HTML file](https://img.shields.io/badge/one%20file-apollo.html-0072B5?style=flat-square&labelColor=0B0B0B)](dist/apollo.html)
 [![No build to run](https://img.shields.io/badge/runtime%20deps-three.js%20only-0072B5?style=flat-square&labelColor=0B0B0B)](#how-it-is-built)
 [![License MIT](https://img.shields.io/badge/license-MIT-E8B84A?style=flat-square&labelColor=0B0B0B)](LICENSE)
 
@@ -21,7 +21,7 @@ Fire every engine, take any stage apart, look inside the cabins, and fly the who
 
 <br />
 
-<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/screenshots/01-ignition.png" width="76%" alt="Saturn V AS-506 at ignition on Launch Complex 39A: five F-1 engines at full thrust, held down on the pad" /></a>
+<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/images/screenshots/01-ignition.png" width="76%" alt="Saturn V AS-506 at ignition on Launch Complex 39A: five F-1 engines at full thrust, held down on the pad" /></a>
 
 <sub>Saturn V AS-506 at ignition on Launch Complex 39A: five F-1s at full thrust, still held down on the pad.</sub>
 
@@ -34,43 +34,43 @@ Fire every engine, take any stage apart, look inside the cabins, and fly the who
 <table>
 <tr>
 <td width="50%" valign="top">
-<img src="docs/screenshots/02-exploded.png" alt="The Saturn V taken apart above its launcher: escape tower, command module, service module, adapter, Eagle, S-IVB, S-II and S-IC" />
+<img src="docs/images/screenshots/02-exploded.png" alt="The Saturn V taken apart above its launcher: escape tower, command module, service module, adapter, Eagle, S-IVB, S-II and S-IC" />
 <p><b>Take the rocket apart.</b> One click opens the whole stack in place: escape tower, <i>Columbia</i>, the adapter, <i>Eagle</i>, all three stages and both interstages, every engine bell hanging clear of the part below it.</p>
 </td>
 <td width="50%" valign="top">
-<img src="docs/screenshots/04-f1-apart.png" alt="The Rocketdyne F-1 engine separated into its assemblies" />
+<img src="docs/images/screenshots/04-f1-apart.png" alt="The Rocketdyne F-1 engine separated into its assemblies" />
 <p><b>Then take the engines apart.</b> The F-1, J-2, SPS, descent and ascent engines are drawn down to the turbopumps, ducts, valves and wiring, and each separates into its assemblies. Click one to zoom to it.</p>
 </td>
 </tr>
 <tr>
 <td colspan="2" valign="top">
-<img src="docs/screenshots/03-all-engines.png" alt="All five Apollo 11 engine types side by side at true relative size, all firing" />
+<img src="docs/images/screenshots/03-all-engines.png" alt="All five Apollo 11 engine types side by side at true relative size, all firing" />
 <p><b>Every engine, to one scale.</b> F-1, J-2, SPS, DPS and APS side by side with their nozzle exits on one line. Ignite them all, or fire and cut any one on its own. The plume colour follows the propellant: kerosene burns orange, hydrogen burns a faint blue, and the hypergolics burn a translucent rose.</p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<img src="docs/screenshots/05-eagle.png" alt="The Lunar Module Eagle with its cabin wall cut away, two crew standing at the controls" />
+<img src="docs/images/screenshots/05-eagle.png" alt="The Lunar Module Eagle with its cabin wall cut away, two crew standing at the controls" />
 <p><b>Inside <i>Eagle</i>.</b> The right wall comes away to show Armstrong and Aldrin standing at the windows on their restraint cables, with the panels, the DSKY, the backpacks and the life-support gear.</p>
 </td>
 <td width="50%" valign="top">
-<img src="docs/screenshots/06-columbia.png" alt="The Command Module Columbia with a wedge cut away, three crew on their couches" />
+<img src="docs/images/screenshots/06-columbia.png" alt="The Command Module Columbia with a wedge cut away, three crew on their couches" />
 <p><b>Inside <i>Columbia</i>.</b> A 140° wedge cut out of the command module: the heat-shield layers in section, three suited crew on their couches, the main display console and the parachutes.</p>
 </td>
 </tr>
 <tr>
 <td colspan="2" valign="top">
-<img src="docs/screenshots/07-journey.png" alt="The whole Apollo 11 flight on a to-scale Earth–Moon map" />
+<img src="docs/images/screenshots/07-journey.png" alt="The whole Apollo 11 flight on a to-scale Earth–Moon map" />
 <p><b>Fly the whole mission.</b> Fifteen stages from liftoff to splashdown on an Earth–Moon map where the planets, their distance and every orbit are to scale. The globe has real coastlines and turns with mission time.</p>
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
-<img src="docs/screenshots/08-journey-liftoff.png" alt="Liftoff from Kennedy Space Center on the journey globe" />
+<img src="docs/images/screenshots/08-journey-liftoff.png" alt="Liftoff from Kennedy Space Center on the journey globe" />
 <p><b>Liftoff, 16 July 1969, 13:32 UTC.</b> The climb to orbit out over the Atlantic from Pad 39A.</p>
 </td>
 <td width="50%" valign="top">
-<img src="docs/screenshots/09-journey-moonwalk.png" alt="Eagle at Tranquility Base with Columbia in lunar orbit" />
+<img src="docs/images/screenshots/09-journey-moonwalk.png" alt="Eagle at Tranquility Base with Columbia in lunar orbit" />
 <p><b>Tranquility Base.</b> <i>Eagle</i> on the surface for the moonwalk while Collins keeps orbiting in <i>Columbia</i>.</p>
 </td>
 </tr>
@@ -79,7 +79,7 @@ Fire every engine, take any stage apart, look inside the cabins, and fly the who
 <details>
 <summary><b>One more: entry and splashdown</b></summary>
 <br />
-<img src="docs/screenshots/10-journey-splashdown.png" width="50%" alt="Entry and splashdown in the Pacific" />
+<img src="docs/images/screenshots/10-journey-splashdown.png" width="50%" alt="Entry and splashdown in the Pacific" />
 </details>
 
 ---
@@ -127,20 +127,20 @@ Turn on *Free cam*, then:
 
 ## Run it
 
-**Just view it:** go to the [live site](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./), or open `apollo.html` in a current Chrome, Edge, Safari or Firefox. It needs an internet connection the first time, to load three.js and the two fonts from their CDNs. It needs WebGL 2; if WebGL is off, the spec sheets still load.
+**Just view it:** go to the [live site](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./), or download [`dist/apollo.html`](dist/apollo.html) and open it in a current Chrome, Edge, Safari or Firefox. It needs an internet connection the first time, to load three.js and the two fonts from their CDNs. It needs WebGL 2; if WebGL is off, the spec sheets still load.
 
 **Serve it locally** (some browsers restrict module scripts on `file://`):
 
 ```bash
 python3 -m http.server 8000
-# then open http://localhost:8000/apollo.html
+# then open http://localhost:8000/dist/apollo.html
 ```
 
-**Build from source.** `apollo.html` is generated; edit `src/` and rebuild:
+**Build from source.** `dist/apollo.html` is generated; edit `src/` and rebuild:
 
 ```bash
 npm install
-npm run build          # src/* → apollo.html
+npm run build          # src/ → dist/apollo.html
 ```
 
 <details>
@@ -151,14 +151,14 @@ Playwright runs the page in Chromium with the SwiftShader software renderer, map
 
 ```bash
 npx playwright install chromium   # once
-node shot.mjs demo '[["wait",8000],["eval","APOLLO.selectItem(\"dALL\"); APOLLO.ignite(); APOLLO.warp(3)"],["el","lineup","#fig"]]' --noaa
+npm run shot -- demo '[["wait",8000],["eval","APOLLO.selectItem(\"dALL\"); APOLLO.ignite(); APOLLO.warp(3)"],["el","lineup","#fig"]]' --noaa
 # → shots/demo-lineup.png
 ```
 
 Flags: `--w=1400 --h=1000` set the viewport, `--mobile` uses a 390 × 844 phone, `--dark` forces the dark scheme, `--noaa` turns anti-aliasing off (much faster in software rendering), and `--dpr=2` sets the pixel ratio.
 The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `shutdown()`, `fireOne(i)`, `setExplode(on)`, `warp(seconds)`, `groupState()`, plus `MENU_ITEMS`, `SHOW`, `C`, `CAM`, `J`.
 
-**Hosting.** GitHub Pages serves the `gh-pages` branch, which mirrors `main`. `index.html` forwards to `apollo.html`, and `.nojekyll` makes Pages serve the files as they are. After changing `main`, update the site with `git push origin main:gh-pages`.
+**Hosting.** GitHub Pages serves the `gh-pages` branch, which holds only the built site: the page as `index.html` (and again as `apollo.html`, so older links keep working) plus `.nojekyll`. After changing `main`, publish with `npm run deploy`, which builds and pushes `dist/apollo.html` there.
 
 **Regenerate the coastlines** (only if you want a different Natural Earth resolution): `npm run land`.
 
@@ -168,28 +168,50 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 
 ## How it is built
 
-`build.mjs` concatenates `src/NN-*.js`, in order, into one ES module. It inlines `style.css` and `body.html` and writes a single standalone page. three.js r0.160 comes in through an import map from jsDelivr. There are no frameworks and no other runtime dependencies.
+`scripts/build.mjs` concatenates every `src/**/NN-*.js`, in NN order, into one ES module. It inlines `src/page/style.css` and `src/page/body.html` and writes one standalone page, `dist/apollo.html`. three.js r0.160 is imported straight from jsDelivr. There are no frameworks and no other runtime dependencies.
+
+```text
+Apollo-11-Anatomy./
+├── dist/
+│   └── apollo.html            the built page: one file, open it and it runs
+├── src/
+│   ├── page/                  style.css · body.html
+│   ├── core/                  00-head · 20-render · 30-geom · 42-showkit
+│   ├── data/                  05-land · 10-data
+│   ├── models/                40-vehicle · 41-spacecraft · 43-detail-engines · 44-cabins · 46-lm
+│   ├── scenes/                45-showroom · 47-journey
+│   └── app/                   50-controller · 60-ui · 70-main
+├── scripts/                   build.mjs · shot.mjs · make-land.mjs · deploy.sh
+├── docs/images/               apollo-11-emblem.png · screenshots/
+├── package.json
+├── LICENSE
+└── README.md
+```
 
 | File | Role |
 |---|---|
-| `src/00-head.js` | three.js import, maths helpers |
-| `src/05-land.js` | Natural Earth 1:110m coastlines (70 rings, ~4,600 points) for the Earth texture |
-| `src/10-data.js` | **Every number on the page.** Engine ratings, stage and module specs, the U.S. Standard Atmosphere 1976, the as-flown ascent table, mission events, the parts index and sources |
-| `src/20-render.js` | The technical-illustration pipeline, toon materials, procedural canvas textures, and the volumetric exhaust shader with its colour sets |
-| `src/30-geom.js` | Geometry kit: lathe profiles (`turn`), rods, modules |
-| `src/40-vehicle.js` | Launcher, tower and swing arms, S-IC, S-II, S-IVB, IU and the engine clusters |
-| `src/41-spacecraft.js` | SLA with hinged panels, Service Module, Command Module, BPC, escape tower |
-| `src/42-showkit.js` | Helpers for the detailed displays: merged geometry, ducts, cables, bolt circles, flanges, valves |
-| `src/43-detail-engines.js` | F-1, J-2, SPS, DPS and APS built to the plumbing, each split into assemblies |
-| `src/44-cabins.js` | *Columbia* and *Eagle* cutaways with posed crew |
-| `src/45-showroom.js` | Registers the displays, the **All engines** row and the depth range for each display |
-| `src/46-lm.js` | *Eagle*, built from the LM-5 structures dimensions: cabin, midsection, tunnel, tanks, antennas, RCS quads, legs, probes, ladder, porch |
-| `src/47-journey.js` | **The Journey**: conic trajectories, the turning Earth, textures for Earth and Moon, screen-space path lines, labels |
-| `src/50-controller.js` | State, engine physics per frame, take-apart poses, camera framing |
-| `src/60-ui.js` | Console, live readouts, stacked parts index, spec sheets |
-| `src/70-main.js` | Boot, picking, the frame loop |
-| `build.mjs` / `shot.mjs` | Build and headless test harness |
-| `tools/make-land.mjs` | Regenerates `src/05-land.js` |
+| `src/core/00-head.js` | three.js import, maths helpers |
+| `src/core/20-render.js` | The technical-illustration pipeline, toon materials, procedural canvas textures, and the volumetric exhaust shader with its colour sets |
+| `src/core/30-geom.js` | Geometry kit: lathe profiles (`turn`), rods, modules |
+| `src/core/42-showkit.js` | Helpers for the detailed displays: merged geometry, ducts, cables, bolt circles, flanges, valves |
+| `src/data/05-land.js` | Natural Earth 1:110m coastlines (70 rings, ~4,600 points) for the Earth texture |
+| `src/data/10-data.js` | **Every number on the page.** Engine ratings, stage and module specs, the U.S. Standard Atmosphere 1976, the as-flown ascent table, mission events, the parts index and sources |
+| `src/models/40-vehicle.js` | Launcher, tower and swing arms, S-IC, S-II, S-IVB, IU and the engine clusters |
+| `src/models/41-spacecraft.js` | SLA with hinged panels, Service Module, Command Module, BPC, escape tower |
+| `src/models/43-detail-engines.js` | F-1, J-2, SPS, DPS and APS built to the plumbing, each split into assemblies |
+| `src/models/44-cabins.js` | *Columbia* and *Eagle* cutaways with posed crew |
+| `src/models/46-lm.js` | *Eagle*, built from the LM-5 structures dimensions: cabin, midsection, tunnel, tanks, antennas, RCS quads, legs, probes, ladder, porch |
+| `src/scenes/45-showroom.js` | Registers the displays, the **All engines** row and the depth range for each display |
+| `src/scenes/47-journey.js` | **The Journey**: conic trajectories, the turning Earth, textures for Earth and Moon, screen-space path lines, labels |
+| `src/app/50-controller.js` | State, engine physics per frame, take-apart poses, camera framing |
+| `src/app/60-ui.js` | Console, live readouts, stacked parts index, spec sheets |
+| `src/app/70-main.js` | Boot, picking, the frame loop |
+| `scripts/build.mjs` | Builds `dist/apollo.html` (`npm run build`) |
+| `scripts/shot.mjs` | Headless screenshots and checks (`npm run shot`) |
+| `scripts/make-land.mjs` | Regenerates `src/data/05-land.js` (`npm run land`) |
+| `scripts/deploy.sh` | Publishes the built page to GitHub Pages (`npm run deploy`) |
+
+The two-digit prefixes set the order the parts are joined in, so a file can move between folders without changing the build.
 
 <details>
 <summary><b>Rendering pipeline</b></summary>
@@ -382,7 +404,7 @@ Apollo 11 was the first crewed landing on another world. Neil Armstrong and Buzz
 
 ## Accuracy notes and drawing liberties
 
-- **Numbers.** Every rated figure comes from the sources below, in one place (`src/10-data.js`). Everything derived from them (exit area, mass flow, Isp, T/W, ambient pressure) is computed, with no tuning.
+- **Numbers.** Every rated figure comes from the sources below, in one place (`src/data/10-data.js`). Everything derived from them (exit area, mass flow, Isp, T/W, ambient pressure) is computed, with no tuning.
 - **Eagle** is built to the published LM-5 structural dimensions:
   - crew compartment 92 in Ø × 42 in, flight stations 44 in apart;
   - forward hatch 32 in square, overhead hatch 33 in;

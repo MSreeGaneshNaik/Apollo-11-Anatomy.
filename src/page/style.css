@@ -30,7 +30,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
-body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
 .page { max-width: 1240px; margin: 0 auto; padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 22px; }
 .mono, .eyebrow, .label { font-family: var(--f-mono); }
 .eyebrow { font-size: 11.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 6px; }
