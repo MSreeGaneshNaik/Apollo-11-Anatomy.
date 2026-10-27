@@ -68,8 +68,9 @@ function buildExtraFX() {
   XFX.padFire = makeFX("FIRE", 1, { len: 8, r0: 7.5, rmax: 8, freq: 1.0, flow: 3, dens: 1.6, attack: 0.5, decay: 1.5 });
   XFX.padFire.position.set(0, -12.5, 0); MODS.launcher.group.add(XFX.padFire);
   // flame and smoke rolling out over the deck around the base, as at every Saturn V ignition
-  XFX.baseFire = makeFX("FIRE", 1, { len: 5.5, r0: 8.5, rmax: 9.5, freq: 1.1, flow: 2.2, dens: 1.2, attack: 1.2, decay: 1.8 });
-  XFX.baseFire.position.set(0, 4.4, 0); MODS.launcher.group.add(XFX.baseFire);
+  XFX.baseFire = makeFX("FIRE", 1, { len: 9, r0: 8.5, rmax: 9.5, freq: 1.1, flow: 2.2, dens: 1.9, attack: 1.2, decay: 1.8 });
+  XFX.baseFire.position.set(0, 8.2, 0); MODS.launcher.group.add(XFX.baseFire);
+  XFX.baseFire.renderOrder = 12;   // the flame glows through the steam around it, not behind it
   XFX.baseSmoke = makeFX("STEAM", 1, { len: 13, r0: 15, rmax: 19, freq: 0.75, flow: 0.8, dens: 1.25, attack: 1.8, decay: 2.8 });
   XFX.baseSmoke.position.set(0, 9.5, 0); MODS.launcher.group.add(XFX.baseSmoke);
 }
