@@ -13,6 +13,8 @@ const walk = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((e) => (
 const jsFiles = walk(srcDir).filter((f) => /^\d\d-.*\.js$/.test(basename(f))).sort((a, b) => basename(a).localeCompare(basename(b)));
 const js = jsFiles.map((f) => `// ---- ${basename(f)} ----\n` + readFileSync(f, "utf8")).join("\n");
 const page = (f) => readFileSync(join(srcDir, "page", f), "utf8");
+// Icons are inlined so the page stays one self-contained file.
+const png = (f) => "data:image/png;base64," + readFileSync(join(srcDir, "page", f)).toString("base64");
 
 const html = `<!doctype html>
 <html lang="en">
@@ -20,6 +22,8 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Apollo 11 Anatomy</title>
+<link rel="icon" type="image/png" sizes="64x64" href="${png("favicon.png")}">
+<link rel="apple-touch-icon" href="${png("apple-touch-icon.png")}">
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Interactive 3D technical drawing of Apollo 11: Saturn V AS-506, CSM-107 Columbia and LM-5 Eagle.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
