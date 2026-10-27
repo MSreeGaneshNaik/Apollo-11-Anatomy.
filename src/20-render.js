@@ -289,6 +289,8 @@ const PIPE = {
     this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
     this.renderer.autoClear = false;
     MAX_ANISO = this.renderer.capabilities.getMaxAnisotropy();
+    const gl = this.renderer.getContext();
+    this.maxRB = Math.min(gl.getParameter(gl.MAX_RENDERBUFFER_SIZE), this.renderer.capabilities.maxTextureSize);
     this.rtN = new THREE.WebGLRenderTarget(4, 4, { type: THREE.UnsignedByteType });
     this.rtN.depthTexture = new THREE.DepthTexture(4, 4);
     this.rtN.depthTexture.type = THREE.UnsignedIntType;
@@ -370,8 +372,10 @@ const PIPE = {
     this.renderer.setPixelRatio(dpr);
     this.renderer.setSize(w, h, false);
     const cw = Math.round(w * dpr), ch = Math.round(h * dpr);
-    // phones and tablets get a smaller supersampling budget: same look, far less memory traffic per frame
-    const budget = COARSE ? 6e6 : 10e6, ss = this.aa ? clamp(Math.sqrt(budget / (cw * ch)), 1, 2) : 1;
+    // Full quality on every device: phones get a budget big enough to always reach the full 2× supersampling
+    // (plus 4× MSAA), limited only by the GPU's largest render buffer so the canvas can never come up blank.
+    const budget = COARSE ? 16e6 : 10e6;
+    const ss = this.aa ? clamp(Math.min(Math.sqrt(budget / (cw * ch)), this.maxRB / cw, this.maxRB / ch), 1, 2) : 1;
     const W = Math.round(cw * ss), H = Math.round(ch * ss);
     this.rtN.setSize(W, H); this.rtC.setSize(W, H); this.rtE.setSize(W, H);
     this.comp.uniforms.uTexel.value.set(1 / W, 1 / H);
