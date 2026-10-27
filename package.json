@@ -1,0 +1,30 @@
+{
+  "name": "apollo-11-anatomy",
+  "version": "1.0.0",
+  "description": "Interactive 3D technical drawing of Apollo 11: Saturn V AS-506, Columbia and Eagle, every engine fireable with real thrust physics, and the whole flight on a to-scale Earth–Moon map.",
+  "private": true,
+  "scripts": {
+    "build": "node build.mjs",
+    "shot": "node shot.mjs",
+    "land": "node tools/make-land.mjs src/05-land.js"
+  },
+  "keywords": [
+    "apollo-11",
+    "saturn-v",
+    "three.js",
+    "webgl",
+    "space",
+    "rocket-engines",
+    "visualization"
+  ],
+  "author": "M. Sree Ganesh",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}
