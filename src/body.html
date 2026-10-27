@@ -27,14 +27,19 @@
         </div></div>
       <div class="corner hint-top" id="hint">Hover or click a part to read it</div>
       <div class="jlab" id="jlab" hidden aria-hidden="true"></div>
-      <div class="corner jstep" id="jstep" role="group" aria-label="Step through the flight"><button type="button" class="pill" id="jprev" aria-label="Previous stage">‹ Previous</button><span id="jpos"></span><button type="button" class="pill" id="jnext" aria-label="Next stage">Next ›</button></div>
-      <div class="corner firerow" id="fireRow" role="group" aria-label="Fire or cut one engine"></div>
-      <div class="corner bl">
-        <button type="button" class="pill" id="ign"><i></i><span>Ignite</span></button>
-        <button type="button" class="pill" id="apart" aria-pressed="false">Take apart</button>
-        <label class="mini-thr" for="thrMini"><span>Throttle</span><input type="range" id="thrMini" min="0" max="100" step="0.5" value="100"><output id="thrMiniOut" for="thrMini">100 %</output></label>
+      <!-- one footer bar: controls on the left, readout on the right; when they don't fit side by side the readout moves up a line instead of overlapping -->
+      <div class="foot" id="foot">
+        <div class="foot-l">
+          <div class="firerow" id="fireRow" role="group" aria-label="Fire or cut one engine"></div>
+          <div class="bl">
+            <button type="button" class="pill" id="ign"><i></i><span>Ignite</span></button>
+            <button type="button" class="pill" id="apart" aria-pressed="false">Take apart</button>
+            <label class="mini-thr" for="thrMini"><span>Throttle</span><input type="range" id="thrMini" min="0" max="100" step="0.5" value="100"><output id="thrMiniOut" for="thrMini">100 %</output></label>
+          </div>
+          <div class="jstep" id="jstep" role="group" aria-label="Step through the flight"><button type="button" class="pill" id="jprev" aria-label="Previous stage">‹ Previous</button><span id="jpos"></span><button type="button" class="pill" id="jnext" aria-label="Next stage">Next ›</button></div>
+        </div>
+        <div class="br" id="readout" aria-live="polite">F-1 × 5 · idle<small>Hold-down arms closed</small></div>
       </div>
-      <div class="corner br" id="readout" aria-live="polite">F-1 × 5 · idle<small>Hold-down arms closed</small></div>
     </section>
   </div>
   <p class="caption" id="caption"></p>

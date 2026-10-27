@@ -251,13 +251,20 @@ function camBasis() {   // camera sits along CAM_DIR from the target; right / up
   CAM_DIR.set(Math.sin(CAM.az) * Math.cos(CAM.el), Math.sin(CAM.el), Math.cos(CAM.az) * Math.cos(CAM.el));
   CAM_RIGHT.crossVectors(UP, CAM_DIR).normalize(); CAM_UP.crossVectors(CAM_DIR, CAM_RIGHT).normalize();
 }
+// Fit a subject that needs `span` of picture height into the band the overlays leave free, centred in it.
+function fitBand(c, span, k) {
+  const ins = UI.insets || { top: 0, bottom: 0 }, H = PIPE.h || 1, free = clamp((H - ins.top - ins.bottom) / H, 0.5, 1);
+  const h = span * k / free;
+  c.addScaledVector(CAM_UP, -((ins.bottom - ins.top) / 2) * (h / H));
+  return { c, h };
+}
 function focusFrame() {
   const ex = ease(C.exAmt);
-  if (C.sel === "whole" || !MENU_ITEMS[C.sel]) return { c: V3(-6, 52, 5).lerp(V3(-1, 68, 3), ex), h: lerp(156, 178, ex) };
+  if (C.sel === "whole" || !MENU_ITEMS[C.sel]) return fitBand(V3(-6, 52, 5).lerp(V3(-1, 68, 3), ex), lerp(146, 166, ex), 1);
   const it = MENU_ITEMS[C.sel];
   if (it.jv && J.built) {                     // the journey map frames a region, not parts
     const f = journeyFrameBox(it.jv), aspect = PIPE.w / PIPE.h;
-    return { c: f.c.clone().add(J_ORIGIN), h: Math.max(f.h, f.w / aspect) * 1.12 };
+    return fitBand(f.c.clone().add(J_ORIGIN), Math.max(f.h, f.w / aspect), 1.0);
   }
   const b = boxOf(it.frame || it.mods);
   if (b.isEmpty()) return { c: CAM.target.clone(), h: CAM.h };
@@ -271,9 +278,10 @@ function focusFrame() {
     x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
   }
   const aspect = PIPE.w / PIPE.h;
-  const h = Math.max(it.show ? 1.2 : 7, Math.max(y1 - y0, (x1 - x0) / aspect) * (it.show ? 1.3 : 1.42));
-  c.addScaledVector(CAM_RIGHT, (x0 + x1) / 2).addScaledVector(CAM_UP, (y0 + y1) / 2 - h * 0.02);
-  return { c, h };
+  c.addScaledVector(CAM_RIGHT, (x0 + x1) / 2).addScaledVector(CAM_UP, (y0 + y1) / 2);
+  const f = fitBand(c, Math.max(y1 - y0, (x1 - x0) / aspect), it.show ? 1.1 : 1.2);
+  f.h = Math.max(f.h, it.show ? 1.2 : 7);
+  return f;
 }
 // continuous keyboard flight: speed scales with how much of the vehicle is in view
 function flyStep(dt) {

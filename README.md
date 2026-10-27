@@ -150,12 +150,13 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 3. **Ink.** A composite pass draws the ink lines wherever the normal bends sharply, the part id changes or the depth jumps. The result reads like a hand-inked technical drawing rather than a shaded model.
 4. **Exhaust and overlays.** Plumes, steam and pad fire are raymarched volumes, 26 steps per pixel, stopped by the scene depth so nozzles and decks hide the flame correctly. The Journey's path lines are drawn in this pass too, as screen-space ribbons that dim behind the planets.
 
-**Anti-aliasing.** With it on, the scene renders at up to 2× the device resolution within a pixel budget (10 MP on desktops, 6 MP on touch devices) and is box-filtered down.
+**Anti-aliasing.** With it on, the scene renders at up to 2× the device resolution within a pixel budget and is box-filtered down. The budget is 10 MP on desktops and 16 MP on phones and tablets, so phones always get the full 2×. The only cap is the GPU's largest render buffer.
 
 **Depth precision.** The camera's near and far planes hug the bounding sphere of whatever is on show. Phone GPUs read depth at half precision, and a wide depth range made the ink pass draw contour bands across smooth surfaces.
 
 **Smoothness:**
 - Frames are skipped when nothing on screen can have changed.
+- The labels and controls over the drawing never overlap: the controls and the readout share one bar that wraps, and every view is framed inside the clear area between the top labels and the bottom bar.
 - The live panel writes to the page only when a value changes, so an idle page does no layout or paint work.
 - Every shader, exhaust included, compiles in idle time after load, so the first *Ignite* doesn't stall.
 - On desktops the Journey map is built in idle time; on phones it is built on first visit.
