@@ -70,8 +70,10 @@ h3 { font-family: var(--f-mono); font-weight: 600; font-size: 11.5px; letter-spa
 .fig.free canvas.dragging { cursor: grabbing; }
 .tog[aria-pressed="false"] b { color: var(--ink-3); }
 .tog:hover { border-color: var(--ink-3); }
-.bl { left: 14px; bottom: 14px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; pointer-events: auto; max-width: calc(100% - 28px); }
-.br { right: 14px; bottom: 14px; text-align: right; color: var(--ink); line-height: 1.45; font-variant-numeric: tabular-nums; background: color-mix(in srgb, var(--card) 88%, transparent); padding: 4px 6px; border-radius: 3px; max-width: 62%; }
+.foot { position: absolute; left: 14px; right: 14px; bottom: 14px; display: flex; flex-wrap: wrap-reverse; align-items: flex-end; justify-content: space-between; gap: 10px 16px; pointer-events: none; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.foot-l { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; max-width: 100%; }
+.bl { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; pointer-events: auto; max-width: 100%; }
+.br { margin-left: auto; text-align: right; color: var(--ink); line-height: 1.45; font-variant-numeric: tabular-nums; background: color-mix(in srgb, var(--card) 88%, transparent); padding: 4px 6px; border-radius: 3px; max-width: min(100%, 460px); }
 .br small { display: block; color: var(--ink-2); font-size: 10.5px; }
 .pill { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line-2); background: var(--card); color: var(--ink); border-radius: 999px; padding: 7px 14px 7px 12px; cursor: pointer; box-shadow: 0 1px 0 rgba(0,0,0,0.04); }
 .pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--ink-3); display: inline-block; }
@@ -79,7 +81,7 @@ h3 { font-family: var(--f-mono); font-weight: 600; font-size: 11.5px; letter-spa
 .pill:hover { border-color: var(--ink-3); }
 .pill:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .pill[aria-pressed="true"] { background: var(--ink); color: var(--card); border-color: var(--ink); }
-.firerow { left: 14px; bottom: 62px; pointer-events: auto; display: none; align-items: center; border: 1px solid var(--line-2); border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--card) 92%, transparent); font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+.firerow { pointer-events: auto; display: none; align-items: center; border: 1px solid var(--line-2); border-radius: 999px; overflow: hidden; background: color-mix(in srgb, var(--card) 92%, transparent); font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
 .fig.lineup .firerow { display: inline-flex; }
 .fig.lineup #apart { display: none; }
 .firerow button { display: inline-flex; align-items: center; gap: 6px; border: 0; border-left: 1px solid var(--line); background: transparent; color: var(--ink-2); font: inherit; letter-spacing: inherit; text-transform: inherit; padding: 8px 11px; cursor: pointer; white-space: nowrap; }
@@ -103,12 +105,12 @@ h3 { font-family: var(--f-mono); font-weight: 600; font-size: 11.5px; letter-spa
 .jl.craft span:empty { display: none; }
 .jl.craft.two i { width: 8px; height: 8px; left: -4px; top: -4px; background: var(--card); border: 2px solid var(--ink); box-shadow: none; }
 .jl.craft.two span { color: var(--ink-2); }
-.jstep { left: 14px; bottom: 14px; display: none; gap: 8px; align-items: center; pointer-events: auto; }
+.jstep { display: none; gap: 8px; align-items: center; pointer-events: auto; }
 .jstep span { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--ink-2); background: color-mix(in srgb, var(--card) 90%, transparent); border: 1px solid var(--line-2); border-radius: 999px; padding: 7px 12px; font-variant-numeric: tabular-nums; }
 .jstep .pill:disabled { opacity: 0.4; cursor: default; }
 .fig.journey .jstep { display: flex; }
 .fig.journey .bl, .fig.journey .firerow { display: none; }
-.hint-top { top: 34px; left: 16px; font-size: 10.5px; color: var(--ink-3); }
+.hint-top { top: 34px; left: 16px; right: 268px; font-size: 10.5px; color: var(--ink-3); line-height: 1.5; }   /* stops short of the camera controls on the right */
 .mini-thr { display: inline-flex; align-items: center; gap: 10px; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); background: color-mix(in srgb, var(--card) 90%, transparent); border: 1px solid var(--line-2); border-radius: 999px; padding: 3px 12px; }
 .mini-thr input { width: clamp(90px, 16vw, 200px); height: 22px; }
 .mini-thr output { color: var(--ink); min-width: 4.6em; text-align: right; font-variant-numeric: tabular-nums; }
@@ -273,10 +275,11 @@ footer p { margin: 0; font-size: 12.5px; color: var(--ink-3); }
   .hint-top { display: none; }
   .mini-thr { width: 100%; justify-content: space-between; }
   .mini-thr input { flex: 1; width: auto; }
-  .br { max-width: calc(100% - 28px); bottom: 104px; }
-  .fig.lineup .br { bottom: 150px; }
-  .firerow { bottom: 102px; }
   .firerow button { padding: 8px 9px; }
+  /* camera controls in two short rows instead of a tall column */
+  .tr { left: 64px; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px; }
+  .tr #figTitle { flex-basis: 100%; text-align: right; margin-bottom: 2px; }
+  .camctl { display: contents; }
   .detail .d-cols { grid-template-columns: minmax(0, 1fr); }
   footer ol { columns: 1; }
   .titleblock { grid-template-columns: repeat(2, minmax(0, 1fr)); }
