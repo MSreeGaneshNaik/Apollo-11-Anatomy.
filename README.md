@@ -1,37 +1,90 @@
+<div align="center">
+
+<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/apollo-11-emblem.png" width="190" alt="Apollo 11 mission emblem: an eagle landing on the Moon with an olive branch, Earth behind" /></a>
+
 # Apollo 11 Anatomy
 
-**An interactive 3D technical drawing of Apollo 11:** Saturn V AS-506, Command and Service Module *Columbia* (CSM-107) and Lunar Module *Eagle* (LM-5). Everything is drawn part by part on Pad 39A, and every engine can be fired with thrust worked out from its rated data. The whole flight, from the pad to the Pacific, is also laid out on an Earth–Moon map drawn to scale.
+**Saturn V AS-506 &nbsp;·&nbsp; *Columbia* CSM-107 &nbsp;·&nbsp; *Eagle* LM-5**
 
-**▶ Live: [msreeganeshnaik.github.io/Apollo-11-Anatomy.](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./)**
+An interactive 3D technical drawing of the rocket and spacecraft that landed on the Moon.<br />
+Fire every engine, take any stage apart, look inside the cabins, and fly the whole mission on a to-scale map.
 
-It is one self-contained web page: open `apollo.html` in a browser and it runs.
+[![Live demo](https://img.shields.io/badge/%E2%96%B6%20Live%20demo-Open%20in%20your%20browser-E8B84A?style=for-the-badge&labelColor=0B0B0B)](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./)
 
-![Saturn V AS-506 at ignition on Launch Complex 39A: five F-1s at full thrust, held down on the pad](docs/screenshots/00-hero-ignition.png)
+[![three.js r160](https://img.shields.io/badge/three.js-r160-0072B5?style=flat-square&logo=threedotjs&logoColor=white&labelColor=0B0B0B)](https://threejs.org/)
+[![WebGL 2](https://img.shields.io/badge/WebGL-2-0072B5?style=flat-square&logo=webgl&logoColor=white&labelColor=0B0B0B)](https://www.khronos.org/webgl/)
+[![One HTML file](https://img.shields.io/badge/one%20file-apollo.html-0072B5?style=flat-square&labelColor=0B0B0B)](apollo.html)
+[![No build to run](https://img.shields.io/badge/runtime%20deps-three.js%20only-0072B5?style=flat-square&labelColor=0B0B0B)](#how-it-is-built)
+[![License MIT](https://img.shields.io/badge/license-MIT-E8B84A?style=flat-square&labelColor=0B0B0B)](LICENSE)
+
+[**Live demo**](https://msreeganeshnaik.github.io/Apollo-11-Anatomy./) &nbsp;·&nbsp; [Tour](#the-tour) &nbsp;·&nbsp; [What's inside](#whats-inside) &nbsp;·&nbsp; [Run it](#run-it) &nbsp;·&nbsp; [How it's built](#how-it-is-built) &nbsp;·&nbsp; [The mission](#apollo-11-everything-you-need-to-know) &nbsp;·&nbsp; [Sources](#sources)
+
+<br />
+
+<a href="https://msreeganeshnaik.github.io/Apollo-11-Anatomy./"><img src="docs/screenshots/01-ignition.png" width="76%" alt="Saturn V AS-506 at ignition on Launch Complex 39A: five F-1 engines at full thrust, held down on the pad" /></a>
+
+<sub>Saturn V AS-506 at ignition on Launch Complex 39A: five F-1s at full thrust, still held down on the pad.</sub>
+
+</div>
+
+<br />
+
+## The tour
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="docs/screenshots/02-exploded.png" alt="The Saturn V taken apart above its launcher: escape tower, command module, service module, adapter, Eagle, S-IVB, S-II and S-IC" />
+<p><b>Take the rocket apart.</b> One click opens the whole stack in place: escape tower, <i>Columbia</i>, the adapter, <i>Eagle</i>, all three stages and both interstages, every engine bell hanging clear of the part below it.</p>
+</td>
+<td width="50%" valign="top">
+<img src="docs/screenshots/04-f1-apart.png" alt="The Rocketdyne F-1 engine separated into its assemblies" />
+<p><b>Then take the engines apart.</b> The F-1, J-2, SPS, descent and ascent engines are drawn down to the turbopumps, ducts, valves and wiring, and each separates into its assemblies. Click one to zoom to it.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<img src="docs/screenshots/03-all-engines.png" alt="All five Apollo 11 engine types side by side at true relative size, all firing" />
+<p><b>Every engine, to one scale.</b> F-1, J-2, SPS, DPS and APS side by side with their nozzle exits on one line. Ignite them all, or fire and cut any one on its own. The plume colour follows the propellant: kerosene burns orange, hydrogen burns a faint blue, and the hypergolics burn a translucent rose.</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="docs/screenshots/05-eagle.png" alt="The Lunar Module Eagle with its cabin wall cut away, two crew standing at the controls" />
+<p><b>Inside <i>Eagle</i>.</b> The right wall comes away to show Armstrong and Aldrin standing at the windows on their restraint cables, with the panels, the DSKY, the backpacks and the life-support gear.</p>
+</td>
+<td width="50%" valign="top">
+<img src="docs/screenshots/06-columbia.png" alt="The Command Module Columbia with a wedge cut away, three crew on their couches" />
+<p><b>Inside <i>Columbia</i>.</b> A 140° wedge cut out of the command module: the heat-shield layers in section, three suited crew on their couches, the main display console and the parachutes.</p>
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+<img src="docs/screenshots/07-journey.png" alt="The whole Apollo 11 flight on a to-scale Earth–Moon map" />
+<p><b>Fly the whole mission.</b> Fifteen stages from liftoff to splashdown on an Earth–Moon map where the planets, their distance and every orbit are to scale. The globe has real coastlines and turns with mission time.</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<img src="docs/screenshots/08-journey-liftoff.png" alt="Liftoff from Kennedy Space Center on the journey globe" />
+<p><b>Liftoff, 16 July 1969, 13:32 UTC.</b> The climb to orbit out over the Atlantic from Pad 39A.</p>
+</td>
+<td width="50%" valign="top">
+<img src="docs/screenshots/09-journey-moonwalk.png" alt="Eagle at Tranquility Base with Columbia in lunar orbit" />
+<p><b>Tranquility Base.</b> <i>Eagle</i> on the surface for the moonwalk while Collins keeps orbiting in <i>Columbia</i>.</p>
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>One more: entry and splashdown</b></summary>
+<br />
+<img src="docs/screenshots/10-journey-splashdown.png" width="50%" alt="Entry and splashdown in the Pacific" />
+</details>
 
 ---
 
-## Contents
-
-- [What you can do](#what-you-can-do)
-- [Screenshots](#screenshots)
-- [Run it](#run-it)
-- [How it is built](#how-it-is-built)
-- [Apollo 11: everything you need to know](#apollo-11-everything-you-need-to-know)
-  - [At a glance](#at-a-glance)
-  - [The crew](#the-crew)
-  - [The vehicle, stage by stage](#the-vehicle-stage-by-stage)
-  - [The engines](#the-engines)
-  - [The journey, stage by stage](#the-journey-stage-by-stage)
-  - [Flight record (GET)](#flight-record-ground-elapsed-time)
-  - [On the Moon](#on-the-moon)
-  - [Where the hardware is now](#where-the-hardware-is-now)
-- [Accuracy notes and drawing liberties](#accuracy-notes-and-drawing-liberties)
-- [Sources](#sources)
-- [Credits](#credits)
-
----
-
-## What you can do
+## What's inside
 
 | Section | What's in it |
 |---|---|
@@ -51,7 +104,11 @@ It is one self-contained web page: open `apollo.html` in a browser and it runs.
 - the J-2 burns hydrogen with liquid oxygen: almost clear, a faint blue with shock diamonds;
 - the SPS, DPS and APS all burn Aerozine 50 with nitrogen tetroxide: a translucent rose-orange.
 
-**Camera.** Turn on *Free cam*, then:
+<details>
+<summary><b>Camera controls</b></summary>
+<br />
+
+Turn on *Free cam*, then:
 
 | Input | Action |
 |---|---|
@@ -64,22 +121,7 @@ It is one self-contained web page: open `apollo.html` in a browser and it runs.
 | Space / Enter | ignite / shut down |
 | [ / ] | throttle down / up |
 
----
-
-## Screenshots
-
-| | |
-|---|---|
-| ![Saturn V on the pad before ignition](docs/screenshots/01-stack.png) | ![All five engine types firing](docs/screenshots/03-all-engines.png) |
-| *AS-506 on LC-39A, before ignition* | *All engines: F-1, J-2, SPS, DPS, APS to one scale* |
-| ![F-1 taken apart](docs/screenshots/04-f1-apart.png) | ![Columbia cutaway](docs/screenshots/05-columbia.png) |
-| *The F-1 separated into its assemblies* | *Columbia's cabin with a wedge cut away* |
-| ![Eagle cutaway](docs/screenshots/06-eagle.png) | ![The Journey overview](docs/screenshots/07-journey.png) |
-| *Eagle's cabin, right wall removed* | *The whole flight on one to-scale map* |
-| ![Liftoff from LC-39A](docs/screenshots/08-journey-liftoff.png) | ![Moonwalk at Tranquility Base](docs/screenshots/09-journey-moonwalk.png) |
-| *Liftoff: the climb to orbit over the Atlantic* | *Eagle at Tranquility Base, Columbia orbiting* |
-| ![Entry and splashdown](docs/screenshots/10-journey-splashdown.png) | |
-| *Entry and splashdown in the Pacific* | |
+</details>
 
 ---
 
@@ -101,7 +143,11 @@ npm install
 npm run build          # src/* → apollo.html
 ```
 
-**Headless screenshots and checks.** Playwright runs the page in Chromium with the SwiftShader software renderer, maps the three.js CDN to `node_modules`, runs a list of actions and saves screenshots plus the console output:
+<details>
+<summary><b>Headless screenshots, scripting, hosting</b></summary>
+<br />
+
+Playwright runs the page in Chromium with the SwiftShader software renderer, maps the three.js CDN to `node_modules`, runs a list of actions and saves screenshots plus the console output:
 
 ```bash
 npx playwright install chromium   # once
@@ -115,6 +161,8 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 **Hosting.** GitHub Pages serves the `gh-pages` branch, which mirrors `main`. `index.html` forwards to `apollo.html`, and `.nojekyll` makes Pages serve the files as they are. After changing `main`, update the site with `git push origin main:gh-pages`.
 
 **Regenerate the coastlines** (only if you want a different Natural Earth resolution): `npm run land`.
+
+</details>
 
 ---
 
@@ -143,7 +191,9 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 | `build.mjs` / `shot.mjs` | Build and headless test harness |
 | `tools/make-land.mjs` | Regenerates `src/05-land.js` |
 
-### Rendering pipeline
+<details>
+<summary><b>Rendering pipeline</b></summary>
+<br />
 
 1. **Normals, part id and depth.** One pass draws every visible part's surface normal, part id and depth into a render target.
 2. **Colour.** A second pass draws the paper-tone "toon" colour with 4× MSAA.
@@ -161,7 +211,11 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 - Every shader, exhaust included, compiles in idle time after load, so the first *Ignite* doesn't stall.
 - On desktops the Journey map is built in idle time; on phones it is built on first visit.
 
-### Physics
+</details>
+
+<details>
+<summary><b>Physics</b></summary>
+<br />
 
 - **Thrust:** F(t, p<sub>a</sub>) = t · F<sub>vac</sub> − p<sub>a</sub> · A<sub>e</sub>. Momentum thrust scales with mass flow; the pressure term does not.
 - **F-1 exit area** comes from its rated pair: A<sub>e</sub> = (1,746,000 − 1,522,000) lbf × 4.44822 N/lbf ÷ 101,325 Pa ≈ 9.83 m², which is an exit diameter of about 3.54 m.
@@ -173,6 +227,8 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 - **The Journey, near Earth:** the coasts are Earth-centred ellipses timed with Kepler's equation from the TLI and entry conditions (perigee 322.7 km after TLI, entry interface 121.9 km).
 - **The Journey, near the Moon:** within about 40,000 km of the Moon the path blends into a lunar hyperbola that reaches periselene 111 km on the far side.
 - **The Journey, frame:** everything is carried into the frame that turns with the Moon (one turn every 27.3 days). That is why the flight closes into the famous figure-8.
+
+</details>
 
 ---
 
@@ -268,7 +324,9 @@ Apollo 11 was the first crewed landing on another world. Neil Armstrong and Buzz
     - The capsule passes through radio blackout, then three main parachutes open.
     - Splashdown is at 195:18:35, 13°19′N 169°9′W, near USS *Hornet*.
 
-### Flight record (ground elapsed time)
+<details>
+<summary><b>Flight record (ground elapsed time)</b></summary>
+<br />
 
 | GET | Event | Logged |
 |---|---|---|
@@ -299,6 +357,8 @@ Apollo 11 was the first crewed landing on another world. Neil Armstrong and Buzz
 | 194:49:19 | CM / SM separation | |
 | 195:03:06 | Entry interface | 400,000 ft · 36,194 ft/s |
 | 195:18:35 | Splashdown | 13°19′N 169°9′W · USS *Hornet* |
+
+</details>
 
 ### On the Moon
 
@@ -361,10 +421,14 @@ Apollo 11 was the first crewed landing on another world. Neil Armstrong and Buzz
 
 ## Credits
 
+- **Apollo 11 mission emblem:** NASA, image [S69-34875](https://images.nasa.gov/details/S69-34875) (June 1969), public domain as a work of the U.S. government. Used here to identify the mission; it does not imply NASA endorsement.
 - [three.js](https://threejs.org/) r160 (MIT)
 - [Natural Earth](https://www.naturalearthdata.com/) (public domain), [world-atlas](https://github.com/topojson/world-atlas) and [topojson-client](https://github.com/topojson/topojson-client) (ISC)
 - Fonts: [Archivo](https://fonts.google.com/specimen/Archivo) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (SIL Open Font License), via Google Fonts
 - [Playwright](https://playwright.dev/) (Apache-2.0), for the headless test harness
 - Built by **M. Sree Ganesh**, with Claude
 
-**License:** [MIT](LICENSE) © 2026 M. Sree Ganesh.
+<div align="center">
+<br />
+<sub><b>License:</b> <a href="LICENSE">MIT</a> © 2026 M. Sree Ganesh &nbsp;·&nbsp; the Apollo 11 emblem is NASA's and is not covered by this license.</sub>
+</div>
