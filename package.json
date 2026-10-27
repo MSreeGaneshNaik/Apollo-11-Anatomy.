@@ -4,9 +4,10 @@
   "description": "Interactive 3D technical drawing of Apollo 11: Saturn V AS-506, Columbia and Eagle, every engine fireable with real thrust physics, and the whole flight on a to-scale Earth–Moon map.",
   "private": true,
   "scripts": {
-    "build": "node build.mjs",
-    "shot": "node shot.mjs",
-    "land": "node tools/make-land.mjs src/05-land.js"
+    "build": "node scripts/build.mjs",
+    "shot": "node scripts/shot.mjs",
+    "land": "node scripts/make-land.mjs",
+    "deploy": "sh scripts/deploy.sh"
   },
   "keywords": [
     "apollo-11",
