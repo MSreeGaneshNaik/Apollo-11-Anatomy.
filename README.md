@@ -6,7 +6,7 @@
 
 It is one self-contained web page: open `apollo.html` in a browser and it runs.
 
-![Saturn V AS-506 on Launch Complex 39A](docs/screenshots/01-stack.png)
+![Saturn V AS-506 at ignition on Launch Complex 39A: five F-1s at full thrust, held down on the pad](docs/screenshots/00-hero-ignition.png)
 
 ---
 
@@ -70,8 +70,8 @@ It is one self-contained web page: open `apollo.html` in a browser and it runs.
 
 | | |
 |---|---|
-| ![F-1s firing on the pad](docs/screenshots/02-f1-pad.png) | ![All five engine types firing](docs/screenshots/03-all-engines.png) |
-| *Ignition: five F-1s at full thrust, held down on the pad* | *All engines: F-1, J-2, SPS, DPS, APS to one scale* |
+| ![Saturn V on the pad before ignition](docs/screenshots/01-stack.png) | ![All five engine types firing](docs/screenshots/03-all-engines.png) |
+| *AS-506 on LC-39A, before ignition* | *All engines: F-1, J-2, SPS, DPS, APS to one scale* |
 | ![F-1 taken apart](docs/screenshots/04-f1-apart.png) | ![Columbia cutaway](docs/screenshots/05-columbia.png) |
 | *The F-1 separated into its assemblies* | *Columbia's cabin with a wedge cut away* |
 | ![Eagle cutaway](docs/screenshots/06-eagle.png) | ![The Journey overview](docs/screenshots/07-journey.png) |
