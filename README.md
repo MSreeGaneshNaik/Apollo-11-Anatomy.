@@ -168,14 +168,14 @@ The page exposes `window.APOLLO` for scripting: `selectItem(id)`, `ignite()`, `s
 
 ## How it is built
 
-`scripts/build.mjs` concatenates every `src/**/NN-*.js`, in NN order, into one ES module. It inlines `src/page/style.css` and `src/page/body.html` and writes one standalone page, `dist/apollo.html`. three.js r0.160 is imported straight from jsDelivr. There are no frameworks and no other runtime dependencies.
+`scripts/build.mjs` concatenates every `src/**/NN-*.js`, in NN order, into one ES module. It inlines `src/page/style.css`, `src/page/body.html` and the tab icons and writes one standalone page, `dist/apollo.html`. three.js r0.160 is imported straight from jsDelivr. There are no frameworks and no other runtime dependencies.
 
 ```text
 Apollo-11-Anatomy./
 ├── dist/
 │   └── apollo.html            the built page: one file, open it and it runs
 ├── src/
-│   ├── page/                  style.css · body.html
+│   ├── page/                  style.css · body.html · favicon.png · apple-touch-icon.png
 │   ├── core/                  00-head · 20-render · 30-geom · 42-showkit
 │   ├── data/                  05-land · 10-data
 │   ├── models/                40-vehicle · 41-spacecraft · 43-detail-engines · 44-cabins · 46-lm
@@ -443,7 +443,7 @@ Apollo 11 was the first crewed landing on another world. Neil Armstrong and Buzz
 
 ## Credits
 
-- **Apollo 11 mission emblem:** NASA, image [S69-34875](https://images.nasa.gov/details/S69-34875) (June 1969), public domain as a work of the U.S. government. Used here to identify the mission; it does not imply NASA endorsement.
+- **Apollo 11 mission emblem:** NASA, image [S69-34875](https://images.nasa.gov/details/S69-34875) (June 1969), public domain as a work of the U.S. government. Used in this README and as the site's tab and home-screen icon, to identify the mission; it does not imply NASA endorsement.
 - [three.js](https://threejs.org/) r160 (MIT)
 - [Natural Earth](https://www.naturalearthdata.com/) (public domain), [world-atlas](https://github.com/topojson/world-atlas) and [topojson-client](https://github.com/topojson/topojson-client) (ISC)
 - Fonts: [Archivo](https://fonts.google.com/specimen/Archivo) and [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) (SIL Open Font License), via Google Fonts
