@@ -238,6 +238,18 @@ UI.sync = function () {
   };
   $("#caption").innerHTML = journey ? "Earth, Moon, their distance and every orbit are drawn to scale; the coasts are shown as seen from a frame turning with the Moon. Step through the flight with Next and Previous, or pick a stage from the index." : sh ? SHOW_CAPS[sh] : caps[G.set] || "";
   UI.tick(true);
+  UI.measure();
+};
+// The drawing is framed inside the band the overlays leave free (below the top labels, above the footer),
+// so parts never sit under a button or a readout.
+UI.insets = { top: 0, bottom: 0 };
+UI.measure = function () {
+  const f = $("#fig").getBoundingClientRect(); if (!f.height) return;
+  let top = 0;
+  // on narrow figures the camera controls span most of the width, so the drawing starts below them too
+  for (const s of f.width < 640 ? [".tl", "#hint", ".tr"] : [".tl", "#hint"]) { const r = $(s).getBoundingClientRect(); if (r.height) top = Math.max(top, r.bottom - f.top); }
+  const ft = $("#foot").getBoundingClientRect();
+  UI.insets = { top: top + 8, bottom: f.bottom - ft.top + 8 };
 };
 
 // write to the DOM only when a value actually changes, so an idle page does no layout or paint work
